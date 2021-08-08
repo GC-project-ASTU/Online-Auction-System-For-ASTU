@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>OASA Request status</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="dashBoared/styles/style.min.css">
+	<!-- Material Design Icon -->
+	<link rel="stylesheet" href="dashBoared/fonts/material-design/css/materialdesignicons.css">
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet" href="dashBoared/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="dashBoared/plugin/sweet-alert/sweetalert.css">
+	
+
+	<!-- Dark Themes 
+	<link rel="stylesheet" href="dashBoared/styles/style-black.min.css">
+    -->
+
+</head>
+
+<body>
+<div class="main-menu">
+	<header class="header">
+		<a href="MianPage.html" class="logo">
+			<i class="fa fa-university" aria-hidden="true"></i>
+			OASA-ASTU
+		</a>
+		<button type="button" class="button-close fa fa-times js__menu_close"></button>
+		
+		<div class="user">
+			<a href="#" class="avatar">
+				<img src="images/MainLogo_Icon_large.png" alt="">
+			</a>
+			<!-- /.name -->
+		</div>
+		<!-- organization icon -->
+
+	</header>
+	<!-- OASA-ASTU and logo on side bar top -->
+
+	<div class="content">
+		<div class="navigation">
+			<h5 class="title">Navigation</h5>
+			
+			<ul class="menu js__accordion">
+				<li class="current">
+					<a class="waves-effect parent-item js__control">
+						<i class="menu-icon mdi mdi-file-send"></i>
+						<span>Request</span>
+						<span class="menu-arrow fa fa-angle-down"></span>
+					</a>
+					<ul class="sub-menu js__content">
+						<li ><a href="Request.html"> Purchase Request</a></li>
+						<li><a href="RequestStatus.html">Approval Status</a></li>
+					</ul>
+					<!-- /.sub-menu js__content -->
+				</li>
+				<li>
+					<a class="waves-effect" href="Manage User.html">
+						<i class="menu-icon mdi mdi-account-settings-variant"></i>
+						<span>Manage user</span>
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect parent-item js__control" href="#">
+						<i class="menu-icon mdi mdi-account-card-details"></i>
+						<span>Registration</span>
+						<span class="menu-arrow fa fa-angle-down"></span>
+					</a>
+					<ul class="sub-menu js__content">
+						<li><a href="Registration.html">Make Registration</a></li>
+						<li><a href="RegisteredList.html">Registered List</a></li>
+		
+					</ul>
+					<!-- /.sub-menu js__content -->
+				</li>
+				<li>
+					<a class="waves-effect" href="Advert-Form.html">
+						<i class="menu-icon fa fa-buysellads"></i>
+						<span>Make Advert</span>
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect" href="Recived Request.html">
+						<i class="menu-icon fa fa-download"></i>
+						<span>Requests Recived</span>
+						<span class="notice notice-blue">New</span>
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect" href="Approve request.html">
+						<i class="menu-icon fa fa-check-square-o"></i>
+						<span>Approved Requests</span>
+						<span class="notice notice-blue">New</span>
+					</a>
+				</li>
+				
+			</ul>
+
+			<h5 class="title">Extra</h5>
+
+			<ul class="menu js__accordion">
+				<li>
+					<a class="waves-effect" href="Bid report.html">
+						<i class="menu-icon mdi mdi-buffer"></i>
+						<span>Bid Report</span>
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect" href="Quality Valuation.html">
+						<i class="menu-icon mdi mdi-quality-high"></i>
+						<span>Quality valuation</span>
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect parent-item js__control" href="#">
+						<i class="menu-icon mdi mdi-pencil-box">
+
+						</i><span>Forms</span><span class="notice notice-blue">7</span></a>
+					<ul class="sub-menu js__content">
+						<li><a href="#">General Elements</a></li>
+						<li><a href="#">Advanced Form</a></li>
+						<li><a href="#">Form Uploads</a></li>
+						<li><a href="#">Form Validation</a></li>
+						<li><a href="#"">Form Wizard</a></li>
+						<li><a href="#">Wysiwig Editors</a></li>
+						<li><a href="#">X-editable</a></li>
+					</ul>
+					
+					
+					<li>
+						<a class="waves-effect" href="Profile.html">
+							<i class="menu-icon mdi mdi-account"></i>
+							<span>Profile</span>
+						</a>
+					</li>
+					<!-- /.sub-menu js__content -->
+				</li>
+					<!-- /.sub-menu js__content -->
+				</li>
+			</ul>
+			<!-- /.menu js__accordion -->
+		</div>
+		<!-- /.navigation -->
+	</div>
+	<!-- side bar all information -->
+</div>
+
+<div class="fixed-navbar">
+	<div class="pull-left">
+		<button type="button" 
+		        class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile">
+		</button>
+		<h1 class="page-title">Request Status</h1>
+		<!-- /.page-title -->
+	</div>
+	<!-- /.pull-left -->
+	<div class="pull-right">
+	
+		<a href="#" class="ico-item mdi mdi-account "></a>
+		<Span> Mikiyas Leul</Span>
+		<a href="#" class="ico-item mdi mdi-logout js__logout"></a><!-- Log-out -->
+	</div>
+	<!-- /.pull-right -->
+</div>
+<!-- fixed-navbar -->
+<div id="wrapper">	
+	<div class="main-content">
+		<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-xs-12 col-sm-12 col-md-11  col-lg-11 col-xl-11">
+
+				<div class="box-content card white ">
+                         <h4 class="box-title">Request Status</h4> 
+                         <div class="alert alert-success alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<strong>Well done!</strong> Successfully Cancelled !!
+						</div>
+                        <!-- <form>
+                             <div class="input-row">
+                                <label for="Department">Department</label>
+                                <input type="Department" name="Department" id="Department">
+                             </div>
+                             <div class="input-row">
+                                <label for="Request_item">Request item</label>
+                                <input type="Request item" name="Request item" id="RequestItem">
+                             </div>
+                             <div class="input-row">
+                                <label for="Request_date">Request date</label>
+                                <input type="Request date" name="Request date" id="RequestDate">
+                             </div>
+                             <div class="input-row">
+                                <label for="Status">Status</label>
+                                <input type="Status" name="Status" id="Status">
+                             </div>
+                             <button class="btn btn-primary " id="sub">submit</button>
+                             
+                            </form>
+                       -->
+
+                         <div class="card-content form-group">
+                            <div class=" box form-group">
+                                <table id="example" class="table  table-bordered  table-responsive-sm display" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Department</th>
+                                            <th>Request Item</th>
+                                            <th>Request Date</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Mechanical engineering</td>
+                                            <td>Stationary material</td>
+                                            <td>07-30-2021</td>
+                                            <td class="text-red">Pending</td>
+                                            <td>
+                                                <button id="delteRequest" class="btn btn-danger"><i class=" fa fa-trash"></i> Delete</button>
+                                            </td>    
+                                        </tr>
+										<tr>
+                                            <td>Applied Bilogy</td>
+                                            <td>Teaching material</td>
+                                            <td>07-17-2021</td>
+                                            <td class="text-red">Pending</td>
+                                            <td>
+                                                <button id="delteRequest" class="btn btn-danger"><i class=" fa fa-trash"></i> Delete</button>
+                                            </td>    
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- /.main-content -->
+</div><!--/#wrapper -->
+
+
+<footer class="footer">
+	<div class="copy-right">
+		<p>&copy;Copyright 2021 Online Auction System for ASTU | Design By 
+			<a href="https://themezhub.com/">MikiyasLeul</a></p>
+	   </div>
+</footer>
+ 
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="dashBoared/scripts/jquery.min.js"></script>
+	<script src="dashBoared/scripts/modernizr.min.js"></script>
+	<script src="dashboared/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="dashBoared/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="dashBoared/plugin/nprogress/nprogress.js"></script>
+	<script src="dashBoared/plugin/sweet-alert/sweetalert.min.js"></script>
+	<script src="dashBoared/plugin/waves/waves.min.js"></script>
+    <script>
+        const formEl= document.querySelector("form");
+        const tbodyEl=document.querySelector("tbody");
+        const tableEl=document.querySelector("table");
+        function onAddWebsite(e)
+            {
+                e.preventDefault();
+                alert("GOOD Work");
+                const Department=document.getElementById("Department").value;
+                const RequestItem=document.getElementById("RequestItem").value;
+                const RequestDate=document.getElementById("RequestDate").value;
+                const Status=document.getElementById("Status").value;
+                tbodyEl.innerHTML +=
+                     `
+                        <tr>
+                            <td>${Department}</td> 
+                            <td>${RequestItem}</td> 
+                            <td>${RequestDate}</td> 
+                            <td>${Status}</td> 
+                            <td><button class="btn btn-danger deleteBtn" >delete</button></td> 
+                        </tr>
+                    `
+                       ;
+            }
+        function onDeleteRow(e)
+            {
+                if(!e.target.classList.contains("deleteBtn"))
+                  {
+                      return;
+                  }
+               const btn=e.target;
+               btn.closest("tr").remove();
+            }
+
+            sub.addEventListener("click",onAddWebsite);
+            tableEl.addEventListener("click",onDeleteRow);
+    </script>
+
+    <script>
+		 $("#delteRequest").click(function()
+			{
+				swal({
+                        title: "Are you sure?",
+                        text: "You will not be able to recover this request!",
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonClass: "btn-danger",
+                        confirmButtonText: "Yes, delete it!",
+                        cancelButtonText: "No, cancel plx!",
+                        closeOnConfirm: false,
+                        closeOnCancel: false
+                        },
+                        function(isConfirm) {
+                                if (isConfirm) 
+                                     {
+                                    swal("Deleted!", "Your request is removed !", "success");
+                                     } 
+                                else {
+                                    swal("Cancelled", "Your request file is still there :)", "error");
+                                     }
+                        });
+		    });
+	</script>
+	<!-- Sparkline Chart -->
+	<script src="dashBoared/plugin/chart/sparkline/jquery.sparkline.min.js"></script>
+	<script src="dashBoared/scripts/chart.sparkline.init.min.js"></script>
+
+	<script src="dashBoared/scripts/main.min.js"></script>
+
+</body>
+</html>

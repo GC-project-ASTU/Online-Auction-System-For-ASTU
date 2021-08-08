@@ -50,7 +50,8 @@ body{
   }
 
  
-    /*------------------footer design-------------------------*/
+    /*------------------
+     design-------------------------*/
 footer
 {
     background:#242c36;
@@ -186,9 +187,11 @@ section.login-wrapper img {
     color:#ffffff;
     margin:0;
     }
+
     .inner-banner .caption{
     position:relative;
     }
+
     .inner-banner h2{
     color:#ffffff;
     font-weight:400;
@@ -196,6 +199,7 @@ section.login-wrapper img {
     margin-bottom: 15px;
     font-size:60px;
     }
+    
     .inner-banner p{
     color:#ffffff;
     font-weight:300;
@@ -216,3 +220,44 @@ section.login-wrapper img {
     position:absolute;
     background:rgba(66, 99, 119, 0.7);
     }
+.box
+   {
+       background-color: #ffffff;
+       padding: 40px;
+       margin: auto;
+       margin-top:  40px;
+       border-radius: 8px;
+       box-shadow: 0 5px 15px rgba(0, 0, 0, 15);
+   }
+.box p 
+   {
+       font-size: 15px;
+       line-height: 28px;
+       height: 90px;
+       overflow: hidden;
+   }
+.box a
+   {
+       display: inline-block;
+       color: #ffffff;      
+   }
+.box a:hover
+   {
+       box-shadow: 0 5px 5px rgba(71, 13, 179, 0.2);
+   }
+.box img
+   {
+       width: 100%;
+       height: 300px;;
+       border-radius: 8px;
+       margin-bottom: 10px;;
+   }
+
+.box.showContent p
+   {
+       height: auto;
+   }
+.box.showContent button.readmore-btn
+   {
+       background-color: RED;
+   }
