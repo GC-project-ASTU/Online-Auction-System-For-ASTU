@@ -28,7 +28,7 @@
 <body>
 <div class="main-menu">
 	<header class="header">
-		<a href="MianPage.html" class="logo">
+		<a href="Page-Requester.html" class="logo">
 			<i class="fa fa-university" aria-hidden="true"></i>
 			OASA-ASTU
 		</a>
@@ -50,91 +50,24 @@
 			<h5 class="title">Navigation</h5>
 			
 			<ul class="menu js__accordion">
-				<li class="current" >
-					<a class="waves-effect parent-item js__control">
-						<i class="menu-icon mdi mdi-file-send"></i>
-						<span>Request</span>
-						<span class="menu-arrow fa fa-angle-down"></span>
-					</a>
-					<ul class="sub-menu js__content">
-						<li ><a href="Request.html"> Purchase Request</a></li>
-						<li><a href="RequestStatus.html">Approval Status</a></li>
-					</ul>
-					<!-- /.sub-menu js__content -->
+				<li class="current">
+				   <a class="waves-effect" href="Request.html">
+                        <i class="menu-icon mdi mdi mdi-file-send"></i>
+                        <span>Purchase Request</span> 
+                    </a>
 				</li>
 				<li>
-					<a class="waves-effect" href="Manage User.html">
-						<i class="menu-icon mdi mdi-account-settings-variant"></i>
-						<span>Manage user</span>
-					</a>
-				</li>
-				<li>
-					<a class="waves-effect parent-item js__control" href="#">
-						<i class="menu-icon mdi mdi-account-card-details"></i>
-						<span>Registration</span>
-						<span class="menu-arrow fa fa-angle-down"></span>
-					</a>
-					<ul class="sub-menu js__content">
-						<li><a href="Registration.html">Make Registration</a></li>
-						<li><a href="RegisteredList.html">Registered List</a></li>
-		
-					</ul>
-					<!-- /.sub-menu js__content -->
-				</li>
-				<li>
-					<a class="waves-effect" href="Advert-Form.html">
-						<i class="menu-icon fa fa-buysellads"></i>
-						<span>Make Advert</span>
-					</a>
-				</li>
-				<li>
-					<a class="waves-effect" href="Recived Request.html">
-						<i class="menu-icon fa fa-download"></i>
-						<span>Requests Recived</span>
-						<span class="notice notice-blue">New</span>
-					</a>
-				</li>
-				<li>
-					<a class="waves-effect" href="Approve request.html">
-						<i class="menu-icon fa fa-check-square-o"></i>
-						<span>Approved Requests</span>
-						<span class="notice notice-blue">New</span>
-					</a>
+                    <a class="waves-effect" href="RequestStatus.html">
+                        <i class="menu-icon fa fa-check-square-o"> </i>
+                        <span>Approval Status</span> 
+                    </a>
 				</li>
 				
 			</ul>
 
 			<h5 class="title">Extra</h5>
 
-			<ul class="menu js__accordion">
-				<li>
-					<a class="waves-effect" href="Bid report.html">
-						<i class="menu-icon mdi mdi-buffer"></i>
-						<span>Bid Report</span>
-					</a>
-				</li>
-				<li>
-					<a class="waves-effect" href="Quality Valuation.html">
-						<i class="menu-icon mdi mdi-quality-high"></i>
-						<span>Quality valuation</span>
-					</a>
-				</li>
-				<li>
-					<a class="waves-effect parent-item js__control" href="#">
-						<i class="menu-icon mdi mdi-pencil-box">
-
-						</i><span>Forms</span><span class="notice notice-blue">7</span></a>
-					<ul class="sub-menu js__content">
-						<li><a href="#">General Elements</a></li>
-						<li><a href="#">Advanced Form</a></li>
-						<li><a href="#">Form Uploads</a></li>
-						<li><a href="#">Form Validation</a></li>
-						<li><a href="#"">Form Wizard</a></li>
-						<li><a href="#">Wysiwig Editors</a></li>
-						<li><a href="#">X-editable</a></li>
-					</ul>
-					
-					
+			<ul class="menu js__accordion">	
 					<li>
 						<a class="waves-effect" href="Profile.html">
 							<i class="menu-icon mdi mdi-account"></i>
@@ -180,11 +113,11 @@
 					<h4 class="box-title">Request</h4>
              
 					<div class="card-content form-group">	
-							<div  class="alert alert-success alert-dismissible" role="alert">
+							<div style="display: none;" id="Al" class="alert alert-success alert-dismissible" role="alert">
 								<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 								<strong>Well done!</strong> You sent the request successfully !!
 							</div>
-
+                       <form id="sub">
                             <div class="form-group">
 								<h2 for="Date" style="color:rgb(119, 96, 96); font-size: 17px;" >
 									Date:
@@ -198,14 +131,15 @@
 									</script>
 								</h2>	
 							</div>
+
 							<div class="form-group">
 								<label for="Department" class=" form-control-label">Department</label>
 									<select class="form-control" id="Department">
-											<option>Computer Science and Enginnering</option>
-											<option>Electronics and Communication Enginnering</option>
-											<option>Power and Control Enginnering</option>
+											<option>Computer Science and Engineering</option>
+											<option>Electronics and Communication Engineering</option>
+											<option>Power and Control Engineering</option>
 											<option>Chemical Engineering</option>
-											<option>Material Enginnering</option>
+											<option>Material Engineering</option>
 											<option>Mechanical Engineering</option>
 											<option>Water Engineering</option>
 											<option>Architectural Engineering</option>
@@ -222,6 +156,7 @@
 									</select>
 							
 							</div>
+
 							<div class="form-group">
 								<label for="Department" class=" form-control-label">Request For</label>
 									<select class="form-control" id="Department">
@@ -230,10 +165,16 @@
 											<option>Electronic Equipment</option>
 											<option>Liberary Materials</option>
 											<option>Teaching Materials</option>
-											<option>Computer Accesesories</option>
-											
-											<option></option>
+											<option>Computer Accesesories</option>	
+											<option>Other</option>
 									</select>
+							</div>
+							
+                            <div class="form-group ">
+								<label  class=" control-label" for="First_name">Title</label>
+								<div >
+								   <input  type="text" class="form-control" id="title" placeholder="Enter title for request item type" required>
+							    </div>
 							</div>
 
 							<div class="form-group">
@@ -242,9 +183,13 @@
 							</div>
 
 							<div class="form-group ">
-								<button type="submit" id="Request" class="btn btn-success">Submit</button>
+								<button type="submit" 
+										id="Request" 
+										class="btn btn-success">
+										Submit
+								</button>
 							</div>	
-							
+						</form>	
 					</div>
 				</div>
 			</div>
@@ -271,14 +216,32 @@
 	<script src="dashBoared/plugin/sweet-alert/sweetalert.min.js"></script>
 	<script src="dashBoared/plugin/waves/waves.min.js"></script>
     <script>
-		 $("#Request").click(function()
-			{
-				swal("Requst Sent!", "You sent Succesfully !", "success");
+	
+				document.querySelector('#sub').addEventListener('submit',function(e)
+		        {
+					e.preventDefault();
+					
+					var title=document.querySelector('title').value; 
+					
+					if (title != ""  )
+							{ 
+								swal("Requst Sent!", "You sent Succesfully !", "success");
+							
+							}		
+						
+				})    
 				
-		    });
-
+				
 	</script>
 
+    <script>
+			var a;
+			function show_hide()
+				{	
+						  document.getElementById("Al").style.display="block";
+							
+				}
+	 </script>
 	<!-- Sparkline Chart -->
 	<script src="dashBoared/plugin/chart/sparkline/jquery.sparkline.min.js"></script>
 	<script src="dashBoared/scripts/chart.sparkline.init.min.js"></script>

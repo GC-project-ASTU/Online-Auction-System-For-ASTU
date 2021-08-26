@@ -12,7 +12,7 @@
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="dashBoared/styles/style.min.css">
-	
+
 	<!-- Material Design Icon -->
 	<link rel="stylesheet" href="dashBoared/fonts/material-design/css/materialdesignicons.css">
 	<!-- mCustomScrollbar -->
@@ -29,7 +29,7 @@
 <body>
 <div class="main-menu">
 	<header class="header">
-		<a href="MianPage.html" class="logo">
+		<a href="Page-admin.html" class="logo">
 			<i class="fa fa-university" aria-hidden="true"></i>
 			OASA-ASTU
 		</a>
@@ -51,91 +51,32 @@
 			<h5 class="title">Navigation</h5>
 			
 			<ul class="menu js__accordion">
-				<li >
-					<a class="waves-effect parent-item js__control">
-						<i class="menu-icon mdi mdi-file-send"></i>
-						<span>Request</span>
-						<span class="menu-arrow fa fa-angle-down"></span>
+				
+				
+                <li class="current">
+					<a class="waves-effect" href="Registration.html">
+						<i class="menu-icon mdi mdi-account-card-details"></i>
+						<span>Registration</span>
 					</a>
-					<ul class="sub-menu js__content">
-						<li ><a href="Request.html"> Purchase Request</a></li>
-						<li><a href="RequestStatus.html">Approval Status</a></li>
-					</ul>
-					<!-- /.sub-menu js__content -->
 				</li>
+                <li>
+                    <a class="waves-effect" href="RegisteredList.html">
+                        <i class="menu-icon fa fa-list"></i>
+                        <span>Registered List</span>
+                    </a>
+                </li>
 				<li>
 					<a class="waves-effect" href="Manage User.html">
 						<i class="menu-icon mdi mdi-account-settings-variant"></i>
 						<span>Manage user</span>
 					</a>
-				</li>
-				<li class="current">
-					<a class="waves-effect parent-item js__control" href="#">
-						<i class="menu-icon mdi mdi-account-card-details"></i>
-						<span>Registration</span>
-						<span class="menu-arrow fa fa-angle-down"></span>
-					</a>
-					<ul class="sub-menu js__content">
-						<li><a href="Registration.html">Make Registration</a></li>
-						<li><a href="RegisteredList.html">Registered List</a></li>
-		
-					</ul>
-					<!-- /.sub-menu js__content -->
-				</li>
-				<li>
-					<a class="waves-effect" href="Advert-Form.html">
-						<i class="menu-icon fa fa-buysellads"></i>
-						<span>Make Advert</span>
-					</a>
-				</li>
-				<li>
-					<a class="waves-effect" href="Recived Request.html">
-						<i class="menu-icon fa fa-download"></i>
-						<span>Requests Recived</span>
-						<span class="notice notice-blue">New</span>
-					</a>
-				</li>
-				<li>
-					<a class="waves-effect" href="Approve request.html">
-						<i class="menu-icon fa fa-check-square-o"></i>
-						<span>Approved Requests</span>
-						<span class="notice notice-blue">New</span>
-					</a>
-				</li>
-				
+				</li>	
 			</ul>
 
 			<h5 class="title">Extra</h5>
 
 			<ul class="menu js__accordion">
-				<li>
-					<a class="waves-effect" href="Bid report.html">
-						<i class="menu-icon mdi mdi-buffer"></i>
-						<span>Bid Report</span>
-					</a>
-				</li>
-				<li>
-					<a class="waves-effect" href="Quality Valuation.html">
-						<i class="menu-icon mdi mdi-quality-high"></i>
-						<span>Quality valuation</span>
-					</a>
-				</li>
-				<li>
-					<a class="waves-effect parent-item js__control" href="#">
-						<i class="menu-icon mdi mdi-pencil-box">
-
-						</i><span>Forms</span><span class="notice notice-blue">7</span></a>
-					<ul class="sub-menu js__content">
-						<li><a href="#">General Elements</a></li>
-						<li><a href="#">Advanced Form</a></li>
-						<li><a href="#">Form Uploads</a></li>
-						<li><a href="#">Form Validation</a></li>
-						<li><a href="#"">Form Wizard</a></li>
-						<li><a href="#">Wysiwig Editors</a></li>
-						<li><a href="#">X-editable</a></li>
-					</ul>
-					
-					
+	
 					<li>
 						<a class="waves-effect" href="Profile.html">
 							<i class="menu-icon mdi mdi-account"></i>
@@ -171,6 +112,7 @@
 	<!-- /.pull-right -->
 </div>
 <!-- fixed-navbar -->
+
 <div id="wrapper">	
 	<div class="main-content">
 		<div class="container">
@@ -181,53 +123,60 @@
 				<div class="box-content card white ">
 					<h4 class="box-title"><i class=" mdi mdi-account-card-details"></i> Users Registration</h4>
 
-					<div class="card-content ">	
-							
-						<form class="form-horizontal">
-							<div class="alert alert-success alert-dismissible" role="alert">
+					<div class="card-content">	
+						
+						<form id="sub" class="form-horizontal" Action="#" Method="POST" >
+
+							<div style="display: none;" id="Al" class="alert alert-success alert-dismissible" role="alert">
 								<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 								<strong>Well done!</strong> You successfully register the user !!
 							</div>
-							<div class="form-group ">
+
+							<div class="form-group " >
 								<label  class="col-md-2  control-label" for="First_name">First Name</label>
 								<div class="col-md-10 ">
-								   <input  type="text" class="form-control" id="First_name" placeholder="Enter First Name">
+								   <input  type="text" class="form-control"  id="First_name" placeholder="Enter First Name" required>
 							    </div>
 							</div>
+							
 							<div class="form-group">
 								<label class="col-md-2 control-label" for="Last_name">Last Name</label>
 								<div class="col-md-10">
-								   <input type="text" class="form-control" id="Last_name" placeholder="Enter Last Name">
+								   <input type="text" class="form-control" id="Last_name" placeholder="Enter Last Name" required>
 							    </div>
 							</div>
+
 							<div class="form-group">
 								<label  class="col-md-2 control-label" for="E_mail">E-Mail</label>
 								<div class="col-md-10">
-								    <input type="email" class="form-control" id="E-Mail" placeholder="Enter E-mail">
+								    <input type="email" class="form-control" id="E-Mail" placeholder="Enter E-mail" required>
 								</div>
 							</div>
+
 							<div class="form-group">
 								<label class="col-md-2 control-label" for="Phone Phone_number">Phone Number</label>
 								<div class="col-md-10">
-								   <input type="text" class="form-control" id="Phone_number" placeholder="Enter Phone number">
+								   <input type="text" class="form-control" id="Phone_number" placeholder="Enter Phone number" required>
 								</div>
 							</div>
+
 							<div class="form-group">
 								<label class="col-md-2 control-label" for="Address">Address</label>
 								<div class="col-md-10">
-								   <input type="text" class="form-control" id="Address" placeholder="Enter Address">
+								   <input type="text" class="form-control" id="Address" placeholder="Enter Address" required>
 								</div>
 							</div>
+
 							<div class="form-group">
 								<label class="col-md-2 control-label" for="User_type" class=" form-control-label">User Type</label>
 								<div class="col-md-10">
-									<select class="form-control" id="User_type">
-										<option>Adminster</option>
-										<option>Advertiser</option>
-										<option>Central Procurment Team</option>
-										<option>Purchase and Property Adminster Directorate</option>
-										<option>Requistioner</option>
-										<option>Quality inspector</option>		
+									<select class="form-control" id="User_type" name="User_type">		
+										<option value="Adminster">Adminster</option>
+										<option value="Advertiser">Advertiser</option>
+										<option value="Central Procurment Team">Central Procurment Team</option>
+										<option value="Purchase and Property Adminster Directorate">Purchase and Property Adminster Directorate</option>
+										<option value="Requistioner">Requistioner</option>
+										<option value="Quality inspector">Quality inspector</option>		
 									</select>
 								</div>
 							</div>
@@ -239,26 +188,25 @@
 							<div class="form-group">
 								<label class="col-md-2 control-label" for="User_name">User Name</label>
 								<div class="col-md-10">
-								   <input type="text" class="form-control" id="User_name" placeholder="Enter User Name">
+								   <input type="text" class="form-control" id="User_name" placeholder="Enter User Name" required>
 								</div>
 							</div>
 							
 							<div class="form-group">
 								<label class="col-md-2 control-label" for="exampleInputPassword1">Password</label>
 								<div class="col-md-10">
-								   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+								   <input type="password" class="form-control" id="Password" placeholder="Enter your password" required>
 								</div>
 							</div>
-							<div class="form-group text-right">
-								<button  type="button" 
-										 class="btn btn-success btn-lg margin-bottom-10 waves-effect waves-light"
-										 id="FormSubmit" 
-										 data-toggle="modal" 
-								         data-target="#boostrapModal-1">
-										 Save
-								</button>
-							</div>	
 							
+						
+							<div class="form-group text-right">
+								<button type="submit"
+										class="btn btn-success btn-lg margin-bottom-10 waves-effect waves-light"
+										id="FormSubmit" >
+										Save
+					           </button>
+							</div>	
 						</form>		
 					</div>
 				</div>
@@ -269,13 +217,15 @@
 	<!-- /.main-content -->
 </div><!--/#wrapper -->
 
-<div class="modal fade" id="boostrapModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div  class="modal fade" id="boostrapModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
+
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title" id="myModalLabel">Department</h4>
 			</div>
+
 			<div class="modal-body">
 				<h4>Choice Requestioner Name</h4>
 				<select class=" form-control" id="Department">
@@ -299,9 +249,10 @@
 					<option>Humaniterian Department</option>
 			</select>
 			</div>
+			
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default btn-sm waves-effect waves-light" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Save changes</button>
+				<button type="button" onclick="show_hide()" class="btn btn-primary btn-sm waves-effect waves-light " data-dismiss="modal">Save changes</button>
 			</div>
 		</div>
 	</div>
@@ -317,27 +268,63 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="dashBoared/scripts/jquery.min.js"></script>
 	<script src="dashBoared/scripts/modernizr.min.js"></script>
-	<script src="assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="dashBoared/plugin/bootstrap/js/bootstrap.min.js"></script>
 	<script src="dashBoared/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="dashBoared/plugin/nprogress/nprogress.js"></script>
 	<script src="dashBoared/plugin/sweet-alert/sweetalert.min.js"></script>
 	<script src="dashBoared/plugin/waves/waves.min.js"></script>
+
+
 	<script>
-		 $("#FormSubmit").click(function()
-			{
-				swal("Succesfully registered!", "", "success")
-		    });
+		document.querySelector('#sub').addEventListener('submit',function(e)
+		        {
+					e.preventDefault();
+					
+					var com=document.querySelector('#User_type').value; 
+					
+					var fname=document.getElementById("First_name").value;
+					var Lname=document.getElementById("Last_name").value;
+					var Email=document.getElementById("E-Mail").value;
+					var PNum=document.getElementById("Phone_number").value;
+					var Address=document.getElementById("Address").value;
+					var Un=document.getElementById("User_name").value;
+					var Password=document.getElementById("Password").value;
+					
+					if (fname != ""  && Lname != ""  && Email != ""  && PNum != ""  && Address != "" &&  Un != "" && Password != ""  )
+							{ 
+								if( com != "Requistioner" )
+									{
+										swal("Succesfully registered!", "", "success");
+									}
+								else
+									{
+										$('#boostrapModal-1').modal('show');
+
+									}
+							
+							}		
+						
+				})    
+		 
 	</script>
+
+	<script>
+		var a;
+		function show_hide()
+			{	
+			 document.getElementById("Al").style.display="block";
+			}
+    </script>
+	
 	<!-- Sparkline Chart -->
 	<script src="dashBoared/plugin/chart/sparkline/jquery.sparkline.min.js"></script>
 	<script src="dashBoared/scripts/chart.sparkline.init.min.js"></script>
   
-    <script src="dashBoared/plugin/bootstrap/js/bootstrap.min.js"></script>
     
 	<script src="dashBoared/scripts/main.min.js"></script>
 		
 	<!-- Remodal -->
-	<script src="assets/plugin/modal/remodal/remodal.min.js"></script>
+	<script src="dashBoared/plugin/modal/remodal/remodal.min.js"></script>
 
 </body>
 </html>

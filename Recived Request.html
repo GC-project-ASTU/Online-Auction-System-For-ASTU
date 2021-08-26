@@ -28,7 +28,7 @@
 <body>
 <div class="main-menu">
 	<header class="header">
-		<a href="MianPage.html" class="logo">
+		<a href="PPAD-page.html" class="logo">
 			<i class="fa fa-university" aria-hidden="true"></i>
 			OASA-ASTU
 		</a>
@@ -49,43 +49,8 @@
 			<h5 class="title">Navigation</h5>
 			
 			<ul class="menu js__accordion">
-				<li >
-					<a class="waves-effect parent-item js__control">
-						<i class="menu-icon mdi mdi-file-send"></i>
-						<span>Request</span>
-						<span class="menu-arrow fa fa-angle-down"></span>
-					</a>
-					<ul class="sub-menu js__content">
-						<li ><a href="Request.html"> Purchase Request</a></li>
-						<li><a href="RequestStatus.html">Approval Status</a></li>
-					</ul>
-					<!-- /.sub-menu js__content -->
-				</li>
-				<li>
-					<a class="waves-effect" href="Manage User.html">
-						<i class="menu-icon mdi mdi-account-settings-variant"></i>
-						<span>Manage user</span>
-					</a>
-				</li>
-				<li >
-					<a class="waves-effect parent-item js__control" href="#">
-						<i class="menu-icon mdi mdi-account-card-details"></i>
-						<span>Registration</span>
-						<span class="menu-arrow fa fa-angle-down"></span>
-					</a>
-					<ul class="sub-menu js__content">
-						<li><a href="Registration.html">Make Registration</a></li>
-						<li><a href="RegisteredList.html">Registered List</a></li>
-		
-					</ul>
-					<!-- /.sub-menu js__content -->
-				</li>
-				<li>
-					<a class="waves-effect" href="Advert-Form.html">
-						<i class="menu-icon fa fa-buysellads"></i>
-						<span>Make Advert</span>
-					</a>
-				</li>
+				
+				
 				<li class="current">
 					<a class="waves-effect" href="Recived Request.html">
 						<i class="menu-icon fa fa-download"></i>
@@ -112,28 +77,8 @@
 						<span>Bid Report</span>
 					</a>
 				</li>
-				<li>
-					<a class="waves-effect" href="Quality Valuation.html">
-						<i class="menu-icon mdi mdi-quality-high"></i>
-						<span>Quality valuation</span>
-					</a>
-				</li>
-				<li>
-					<a class="waves-effect parent-item js__control" href="#">
-						<i class="menu-icon mdi mdi-pencil-box">
-
-						</i><span>Forms</span><span class="notice notice-blue">7</span></a>
-					<ul class="sub-menu js__content">
-						<li><a href="#">General Elements</a></li>
-						<li><a href="#">Advanced Form</a></li>
-						<li><a href="#">Form Uploads</a></li>
-						<li><a href="#">Form Validation</a></li>
-						<li><a href="#"">Form Wizard</a></li>
-						<li><a href="#">Wysiwig Editors</a></li>
-						<li><a href="#">X-editable</a></li>
-					</ul>
-					
-					
+				
+				
 					<li>
 						<a class="waves-effect" href="Profile.html">
 							<i class="menu-icon mdi mdi-account"></i>
@@ -170,6 +115,7 @@
 	<!-- /.pull-right -->
 </div>
 <!-- fixed-navbar -->
+
 <div id="wrapper">	
 	<div class="main-content">
 		<div class="container">
@@ -177,6 +123,16 @@
 			<div class="col-xs-12 col-sm-10  col-md-10  col-lg-10 col-xl-10">
 
 				<div class="box-content card white ">	
+					<div  style="display: none;" id="Al" class="alert alert-success alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<strong> Done!</strong> Request Approve !!
+					</div>
+
+					<div  style="display: none;" id="All" class="alert alert-danger alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<strong> Done!</strong> Request is Decline !!
+					</div>
+
 								<div class="review-list">
 									<div class="review-item">
 										<div class="top">
@@ -274,12 +230,10 @@
 				</div>
 			   </div>	
 			 </div>
-			</div>
-		</div>
-	</div>
-	</div>
+			 </div>
+</div>
+	
 	<!-- /.main-content -->
-</div><!--/#wrapper -->
 
 
 <div class="modal fade" id="Approval" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -290,15 +244,16 @@
 				<h4 class="modal-title" id="myModalLabel">Approva Status</h4>
 			</div>
 			<div class="modal-body">
-				<select class=" form-control" id="Department">
-					<option>Approve</option>
-					<option>Dis Approve</option>
-				
-			</select>
+
+				<select class=" form-control" id="Status" name="Status">
+					<option value="Approve">Approve</option>
+					<option value="Dis Approve">Decline</option>
+			    </select>
+
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default btn-sm waves-effect waves-light" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Ok</button>
+				<button id="ForStatus" type="button" data-dismiss="modal" class="btn btn-primary btn-sm waves-effect waves-light">Ok</button>
 			</div>
 		</div>
 	</div>
@@ -320,7 +275,25 @@
 	<script src="dashBoared/plugin/nprogress/nprogress.js"></script>
 	<script src="dashBoared/plugin/sweet-alert/sweetalert.min.js"></script>
 	<script src="dashBoared/plugin/waves/waves.min.js"></script>
-   
+
+	<script>
+		document.querySelector('#ForStatus').addEventListener('click',function()
+		        {
+					var com=document.querySelector('#Status').value;
+					if( com == "Approve")
+                           {
+							document.getElementById("Al").style.display="block";
+							document.getElementById("All").style.display="none";
+						   }
+					else
+					       {
+							document.getElementById("All").style.display="block"; 
+							document.getElementById("Al").style.display="none";
+						   }
+				});	 
+
+    </script>
+
 	<!-- Sparkline Chart -->
 	<script src="dashBoared/plugin/chart/sparkline/jquery.sparkline.min.js"></script>
 	<script src="dashBoared/scripts/chart.sparkline.init.min.js"></script>
